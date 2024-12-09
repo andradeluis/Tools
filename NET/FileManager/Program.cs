@@ -5,28 +5,33 @@ class Program
     {
         try
         {
-            // File name replacer
-            // File name appender
-            // File name remover
-
-            // Params: FolderPath, FileExtension
-            Console.WriteLine("File Manager. Type the option you want to use: \n1. Replace\n2. Prepend\n3. Remove");
-            string? typedValue = Console.ReadLine();
-
-            switch (typedValue)
+            bool shouldWeContinue = true;
+            while (shouldWeContinue)
             {
-                case "1":
-                    Replace();
-                    break;
-                case "2":
-                    Prepend();
-                    break;
-                case "3":
-                    Remove();
-                    break;
-                default:
-                    Console.WriteLine($"Invalid option: ({typedValue})");
-                    break;
+                // File name replacer
+                // File name appender
+                // File name remover
+
+                // Params: FolderPath, FileExtension
+                Console.WriteLine("File Manager. Type the option you want to use: \n1. Replace\n2. Prepend\n3. Remove");
+                string? typedValue = Console.ReadLine();
+
+                switch (typedValue)
+                {
+                    case "1":
+                        Replace();
+                        break;
+                    case "2":
+                        Prepend();
+                        break;
+                    case "3":
+                        Remove();
+                        break;
+                    default:
+                        Console.WriteLine($"Invalid option: ({typedValue})");
+                        shouldWeContinue = false;
+                        break;
+                }
             }
         }
         catch (Exception)
