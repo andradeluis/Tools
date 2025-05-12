@@ -10,6 +10,16 @@
 			  "FileNameModifier/FileNameModifier.csproj"
 			],
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build FileContentModifier",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+			  "build",
+			  "FileContentModifier/FileContentModifier.csproj"
+			],
+			"problemMatcher": "$msCompile"
 		}
 	]
 }

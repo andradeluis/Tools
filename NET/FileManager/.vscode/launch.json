@@ -14,6 +14,17 @@
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "externalTerminal"
+        },
+        {
+            "name": "File Content Modifier",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build FileContentModifier",
+            "program": "${workspaceFolder}/FileContentModifier/bin/Debug/net8.0/FileContentModifier.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "externalTerminal"
         }
     ]
 }
