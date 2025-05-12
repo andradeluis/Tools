@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager", "FileManager.csproj", "{2C60283A-859B-40DD-A71C-151DAC3CB1F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileNameModifier", "FileNameModifier\FileNameModifier.csproj", "{2C60283A-859B-40DD-A71C-151DAC3CB1F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
