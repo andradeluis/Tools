@@ -25,6 +25,17 @@
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "externalTerminal"
+        },
+        {
+            "name": "File Searcher",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build FileSearcher",
+            "program": "${workspaceFolder}/FileSearcher/bin/Debug/net8.0/FileSearcher.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "externalTerminal"
         }
     ]
 }

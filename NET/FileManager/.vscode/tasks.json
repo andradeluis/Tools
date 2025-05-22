@@ -20,6 +20,16 @@
 			  "FileContentModifier/FileContentModifier.csproj"
 			],
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build FileSearcher",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+			  "build",
+			  "FileSearcher/FileSearcher.csproj"
+			],
+			"problemMatcher": "$msCompile"
 		}
 	]
 }
