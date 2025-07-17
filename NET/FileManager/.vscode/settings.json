@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "FileNameManager.sln"
+    "dotnet.defaultSolution": "FileNameManager.sln",
+    "WhiteSource Advise.Diff.BaseBranch": "main"
 }

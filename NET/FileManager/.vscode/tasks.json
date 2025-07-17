@@ -6,8 +6,8 @@
 			"command": "dotnet",
 			"type": "process",
 			"args": [
-			  "build",
-			  "FileNameModifier/FileNameModifier.csproj"
+				"build",
+				"FileNameModifier/FileNameModifier.csproj"
 			],
 			"problemMatcher": "$msCompile"
 		},
@@ -16,8 +16,8 @@
 			"command": "dotnet",
 			"type": "process",
 			"args": [
-			  "build",
-			  "FileContentModifier/FileContentModifier.csproj"
+				"build",
+				"FileContentModifier/FileContentModifier.csproj"
 			],
 			"problemMatcher": "$msCompile"
 		},
@@ -26,8 +26,18 @@
 			"command": "dotnet",
 			"type": "process",
 			"args": [
-			  "build",
-			  "FileSearcher/FileSearcher.csproj"
+				"build",
+				"FileSearcher/FileSearcher.csproj"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build XMLModifier",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"XMLModifier/XMLModifier.csproj"
 			],
 			"problemMatcher": "$msCompile"
 		}

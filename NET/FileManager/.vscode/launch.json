@@ -1,41 +1,52 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "File Name Modifier",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build FileNameModifier",
-            "program": "${workspaceFolder}/FileNameModifier/bin/Debug/net8.0/FileNameModifier.exe",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "stopAtEntry": false,
-            "console": "externalTerminal"
-        },
-        {
-            "name": "File Content Modifier",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build FileContentModifier",
-            "program": "${workspaceFolder}/FileContentModifier/bin/Debug/net8.0/FileContentModifier.exe",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "stopAtEntry": false,
-            "console": "externalTerminal"
-        },
-        {
-            "name": "File Searcher",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build FileSearcher",
-            "program": "${workspaceFolder}/FileSearcher/bin/Debug/net8.0/FileSearcher.exe",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "stopAtEntry": false,
-            "console": "externalTerminal"
-        }
-    ]
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "File Name Modifier",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build FileNameModifier",
+			"program": "${workspaceFolder}/FileNameModifier/bin/Debug/net8.0/FileNameModifier.exe",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"stopAtEntry": false,
+			"console": "externalTerminal"
+		},
+		{
+			"name": "File Content Modifier",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build FileContentModifier",
+			"program": "${workspaceFolder}/FileContentModifier/bin/Debug/net8.0/FileContentModifier.exe",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"stopAtEntry": false,
+			"console": "externalTerminal"
+		},
+		{
+			"name": "File Searcher",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build FileSearcher",
+			"program": "${workspaceFolder}/FileSearcher/bin/Debug/net8.0/FileSearcher.exe",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"stopAtEntry": false,
+			"console": "externalTerminal"
+		},
+		{
+			"name": "XML Modifier",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build XMLModifier",
+			"program": "${workspaceFolder}/XMLModifier/bin/Debug/net8.0/XMLModifier.exe",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"stopAtEntry": false,
+			"console": "externalTerminal"
+		}
+	]
 }

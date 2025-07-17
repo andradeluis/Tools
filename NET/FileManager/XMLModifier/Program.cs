@@ -8,9 +8,6 @@ class Program
 	{
 		// Params: FolderPath, FileExtension
 		Console.WriteLine("Following program allows you to modify XML need for Nagarro");
-
-		// string inputPath = "input.xml"; // Change to your file path
-
 		Console.WriteLine("Type the file path:");
 		string? filePath = Console.ReadLine();
 		if (string.IsNullOrEmpty(filePath))
@@ -33,29 +30,38 @@ class Program
 		List<string> outputLines = new();
 
 		Regex referenceRegex = new(@"<Reference Include=""(?<name>[^,""]+), Version=(?<version>[^,""]+),.*?>", RegexOptions.Compiled);
-		bool insideReference = false;
+		bool skippingReferenceBlock = false;
 
 		foreach (var line in lines)
 		{
-			if (!insideReference)
-			{
-				var match = referenceRegex.Match(line);
-				if (match.Success)
+				if (!skippingReferenceBlock)
 				{
-					string name = match.Groups["name"].Value;
-					string version = match.Groups["version"].Value;
-					outputLines.Add($"<PackageReference Include=\"{name}\" Version=\"{version}\" />");
-					insideReference = true; // Skip next lines until </PackageReference>
+						var match = referenceRegex.Match(line);
+						if (match.Success)
+						{
+								string name = match.Groups["name"].Value;
+								string version = match.Groups["version"].Value;
+
+								// Add <PackageReference />
+								outputLines.Add($"<PackageReference Include=\"{name}\" Version=\"{version}\" />");
+
+								// Start skipping the rest of this <Reference> block
+								skippingReferenceBlock = true;
+						}
+						else
+						{
+								// Not a <Reference> block, copy as-is
+								outputLines.Add(line);
+						}
 				}
 				else
 				{
-					outputLines.Add(line);
+						// Look for end of </Reference> block to stop skipping
+						if (line.Trim().Equals("</Reference>", StringComparison.OrdinalIgnoreCase))
+						{
+								skippingReferenceBlock = false;
+						}
 				}
-			}
-			else if (line.Trim().Contains("</PackageReference>"))
-			{
-				insideReference = false; // Resume adding lines after skipping block
-			}
 		}
 
 		string outputPath = Path.Combine(filePath, $"new{fileName}");
